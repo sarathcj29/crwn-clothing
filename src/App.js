@@ -2,14 +2,15 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.component.jsx';
 import Navigation from './routes/navigation/navigation.component.jsx';
 import Authentication from './routes/authentication/authentication.component.jsx';
+import Shop from './routes/shop/shop.component.jsx';
 
-const Shop = () => {
-  return (
-    <div>
-      <h1>I'm the shop page</h1>
-    </div>
-  );
-};
+// const Shop = () => {
+//   return (
+//     <div>
+//       <h1>I'm the shop page</h1>
+//     </div>
+//   );
+// };
 
 const App = () => {
   return (
