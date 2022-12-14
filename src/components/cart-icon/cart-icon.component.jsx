@@ -7,14 +7,19 @@ import { CartContext } from '../../contexts/cart.context';
 import './cart-icon.styles.scss';
 
 const CartIcon = () => {
-  const { isCartOpen, setCartIsOpen } = useContext(CartContext);
-
+  const { isCartOpen, setCartIsOpen, cartCount } = useContext(CartContext);
   const toggleCartOpen = () => setCartIsOpen(!isCartOpen);
+
+  // One way of doing it, but effective would be to add useEffect in cart.context
+  // const cartItemsCount = cartItems.reduce(
+  //   (accVal, _, currIndex) => accVal + cartItems[currIndex].quantity,
+  //   0
+  // );
 
   return (
     <div className="cart-icon-container" onClick={toggleCartOpen}>
       <ShoppingIcon className="shopping-icon" />
-      <span className="item-count">0</span>
+      <span className="item-count">{cartCount}</span>
     </div>
   );
 };
